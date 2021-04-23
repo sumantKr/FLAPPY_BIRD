@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: grid;
+    place-content: center;
+    background-color: rgba($color: #cc0d0d, $alpha: 0.8);
+   
+    .start {
+        color: aliceblue;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        font-size: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #c7139a;
+        padding: 20px;
+        border-radius: 20px;
+    }
+    .game {
+        height: 35rem;
+        width: 25rem;
+        border-radius: 20px;
+        filter: drop-shadow(5px 5px 2px rgba($color: #000000, $alpha: 0.3));
+        @media (max-width: 426px) {
+            height: 100vh;
+            width: 100vw;
+        }
+        .birb {
+            position: absolute;
+            width: 2rem;
+            height: 2rem;
+            background: #ccaf0d;
+            border: solid 1px black;
+            border-radius: 50%;
+            top: 100px;
+            left: 100px;
+        }
+        .sky {
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+
+            background-color: rgba(32, 32, 230, 1);
+            height: 25rem;
+            @media (max-width: 426px) {
+                height: 64vh;
+                width: 100vw;
+                border-radius:0;
+            }
+        }
+        .ground {
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+
+            height: 10rem;
+            background-color: rgba(48, 196, 48, 1);
+            @media (max-width: 426px) {
+                height: 36vh;
+                width: 100vw;
+                border-radius:0;
+
+            }
+        }
+        .obstacle-bottom {
+            position: absolute;
+            width: 2rem;
+            background: #000000;
+            bottom: 8rem;
+            @media (max-width:426px) {
+            bottom: 10.5rem;
+            }
+        }
+        .obstacle-top {
+            position: absolute;
+            width: 2rem;
+            background: #000000;
+            top: 1rem;
+            
+        }
+    }
+}

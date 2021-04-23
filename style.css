@@ -1,0 +1,121 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  background-color: rgba(204, 13, 13, 0.8);
+}
+
+body .start {
+  color: aliceblue;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1;
+  font-size: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #c7139a;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+body .game {
+  height: 35rem;
+  width: 25rem;
+  border-radius: 20px;
+  -webkit-filter: drop-shadow(5px 5px 2px rgba(0, 0, 0, 0.3));
+          filter: drop-shadow(5px 5px 2px rgba(0, 0, 0, 0.3));
+}
+
+@media (max-width: 426px) {
+  body .game {
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+body .game .birb {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background: #ccaf0d;
+  border: solid 1px black;
+  border-radius: 50%;
+  top: 100px;
+  left: 100px;
+}
+
+body .game .sky {
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  background-color: #2020e6;
+  height: 25rem;
+}
+
+@media (max-width: 426px) {
+  body .game .sky {
+    height: 64vh;
+    width: 100vw;
+    border-radius: 0;
+  }
+}
+
+body .game .ground {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  height: 10rem;
+  background-color: #30c430;
+}
+
+@media (max-width: 426px) {
+  body .game .ground {
+    height: 36vh;
+    width: 100vw;
+    border-radius: 0;
+  }
+}
+
+body .game .obstacle-bottom {
+  position: absolute;
+  width: 2rem;
+  background: #000000;
+  bottom: 8rem;
+}
+
+@media (max-width: 426px) {
+  body .game .obstacle-bottom {
+    bottom: 10.5rem;
+  }
+}
+
+body .game .obstacle-top {
+  position: absolute;
+  width: 2rem;
+  background: #000000;
+  top: 1rem;
+}
+/*# sourceMappingURL=style.css.map */
